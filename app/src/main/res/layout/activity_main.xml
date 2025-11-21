@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="74dp"
+            android:gravity="center"
+            android:paddingBottom="16dp"
+            android:text="@string/zip_password_cracker"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/selectZipBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/select_zip_file" />
+
+        <Button
+            android:id="@+id/passwordListBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/load_custom_password_list"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/number_of_threads"
+            android:textSize="16sp"
+            android:paddingBottom="4dp"/>
+
+        <EditText
+            android:id="@+id/threadCountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints=""
+            android:inputType="number"
+            android:hint="@string/number_4"
+            android:layout_marginBottom="16dp"/>
+
+        <LinearLayout
+            style="?android:attr/buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/startCrackBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/start_cracking"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/stopBtn"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/stop"
+                android:backgroundTint="#DC3545"/>
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            style="?android:attr/progressBarStyleHorizontal"/>
+
+        <TextView
+            android:id="@+id/statusText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ready"
+            android:textSize="14sp"
+            android:padding="12dp"
+            android:background="#F0F0F0"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- NEW: attempts per second display -->
+        <TextView
+            android:id="@+id/attemptsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"/>
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="12dp"
+            android:background="#E8F5E9"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_marginTop="16dp"
+            android:background="#FFF3CD"
+            android:padding="8dp"
+            android:text="@string/note_password_list"
+            android:textSize="12sp" />
+
+        <Switch
+            android:id="@+id/autoBenchmarkToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Auto-benchmark threads" />
+    </LinearLayout>
+</ScrollView>
